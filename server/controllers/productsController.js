@@ -123,56 +123,6 @@ exports.getAllSuggestedProducts = catchAsync(async (req, res, next) => {
   });
 });
 
-// exports.getAllSuggestedProducts = catchAsync(async (req, res, next) => {
-
-//   let query = Product.find().where("status").equals("suggestion");
-
-//   if (req.query.category && req.query.category !== "all") {
-//     query = query.where("category").equals(req.query.category);
-//   }
-
-//   let sortBy = {};
-
-//   if (req.query.sortBy === "most-upvotes") {
-//     sortBy = { upvotes: -1 };
-//   }
-
-//   if (req.query.sortBy === "least-upvotes") {
-//     sortBy = { upvotes: 1 };
-//   }
-
-//   if (req.query.sortBy === "most-comments") {
-//     sortBy = { "comments.length": -1 };
-//   }
-
-//   if (req.query.sortBy === "least-comments") {
-//     sortBy = { "comments.length": 1 };
-//   }
-
-//   const products = await query
-//     .sort(sortBy)
-//     .populate({
-//       path: "comments",
-//       select: "-__v",
-//       populate: [
-//         { path: "user", select: "-__v" },
-//         {
-//           path: "replies",
-//           select: "-__v",
-//           populate: { path: "user", select: "-__v" },
-//         },
-//       ],
-//     })
-//     .select("-__v");
-
-//   res.status(200).json({
-//     status: "success",
-//     results: products.length,
-//     data: {
-//       products,
-//     },
-//   });
-// });
 
 exports.createProduct = catchAsync(async (req, res, next) => {
   const { title, category, detail, createdBy } = req.body;
