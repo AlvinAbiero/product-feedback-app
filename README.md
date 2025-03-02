@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/AbieroAlvin/Product-feedback-app](https://github.com/AbieroAlvin/Product-feedback-app)
-- Live Site URL:
+- Solution URL: [https://github.com/AlvinAbiero/product-feedback-app](https://github.com/AlvinAbiero/Product-feedback-app)
+- Live Site URL:[https://product-feedback-app-nu-nine.vercel.app/](https://product-feedback-app-nu-nine.vercel.app/)
 
 ## My process
 
